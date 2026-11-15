@@ -1,0 +1,16 @@
+# Introduction
+
+The aim of the *BiocJobs* project is to facilitate the dissemination and reuse of computational methods implemented in Bioconductor packages.
+BiocJobs makes suitable methods available as ready-to-use components for workflow managers such as Nextflow, Galaxy, and WDL.
+
+Many Bioconductor analyses are interactive and exploratory, but others are well suited to batch execution: they take files and parameters as input and produce files as output.
+Today, using these analyses in a workflow often requires a wrapper written and maintained separately from the package.
+Such wrappers can fall out of sync as the package changes, and writing them requires specialist effort.
+
+BiocJobs addresses this gap by letting package developers describe a dispatchable job in the package itself. A declaration specifies its inputs, outputs, options, resource needs, and citations; an accompanying R script implements the analysis. The declaration provides a shared, explicit interface that can be used to generate artifacts for multiple workflow systems, rather than maintaining a separate hand-written wrapper for each one.
+
+The project follows the GA4GH Task Execution Service (TES) task model: stage input files, run one or more containerized commands in sequence, and collect output files. This common model supports projections to Galaxy tools, Nextflow modules, WDL tasks, and TES task templates, while leaving workflow orchestration to the workflow system.
+
+A related effort is exploring package-scoped containers that bundle a Bioconductor package with its declared dependencies. These images can provide reproducible execution environments for dispatched jobs and build on existing Bioconductor container infrastructure.
+
+BiocJobs is an early, evolving project. Its specification and generated artifacts are being evaluated across packages and workflow systems, and feedback from package developers and workflow users will help shape them. See the [BiocJobs project](https://github.com/almahmoud/BiocJobs) and the [Bioconductor community blog post](https://blog.bioconductor.org/posts/2026-08-21-biocjobs/#a-subproject-per-package-containers) for details.

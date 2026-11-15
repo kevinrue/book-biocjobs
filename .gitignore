@@ -1,0 +1,21 @@
+# Quarto project and rendered book
+/.quarto/
+/_book/
+
+# Jupyter notebooks executed by Quarto
+**/*.quarto_ipynb
+
+# LaTeX and PDF build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc

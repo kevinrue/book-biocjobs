@@ -1,0 +1,5 @@
+# Preface {.unnumbered}
+
+The Bioconductor project [@bioc2015] brings together a broad community developing and using open-source tools for biological data analysis. This book introduces BiocJobs, an opt-in way for Bioconductor package developers to describe analyses in their packages as dispatchable jobs. It is for anyone who wants to add a job description to a package, or use those jobs in workflow systems such as Galaxy, Nextflow, and WDL.
+
+BiocJobs is still evolving. The examples and guidance here reflect the project’s current design and may change as the specification is tested across more packages and workflow systems. We hope the book helps readers understand the approach, try it with their own analyses, and contribute feedback that helps shape what comes next.
