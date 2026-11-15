@@ -1,0 +1,32 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BiocJobs: Dispatching jobs from Bioconductor packages",
+    "section": "",
+    "text": "Preface\nThe Bioconductor project (Huber et al. 2015) brings together a broad community developing and using open-source tools for biological data analysis. This book introduces BiocJobs, an opt-in way for Bioconductor package developers to describe analyses in their packages as dispatchable jobs. It is for anyone who wants to add a job description to a package, or use those jobs in workflow systems such as Galaxy, Nextflow, and WDL.\nBiocJobs is still evolving. The examples and guidance here reflect the project’s current design and may change as the specification is tested across more packages and workflow systems. We hope the book helps readers understand the approach, try it with their own analyses, and contribute feedback that helps shape what comes next.\n\n\n\n\nHuber, W., V. J. Carey, R. Gentleman, et al. 2015. “Orchestrating High-Throughput Genomic Analysis with Bioconductor.” Nature Methods 12 (2): 115–21. http://www.nature.com/nmeth/journal/v12/n2/full/nmeth.3252.html.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "The aim of the BiocJobs project is to facilitate the dissemination and reuse of computational methods implemented in Bioconductor packages. BiocJobs makes suitable methods available as ready-to-use components for workflow managers such as Nextflow, Galaxy, and WDL.\nMany Bioconductor analyses are interactive and exploratory, but others are well suited to batch execution: they take files and parameters as input and produce files as output. Today, using these analyses in a workflow often requires a wrapper written and maintained separately from the package. Such wrappers can fall out of sync as the package changes, and writing them requires specialist effort.\nBiocJobs addresses this gap by letting package developers describe a dispatchable job in the package itself. A declaration specifies its inputs, outputs, options, resource needs, and citations; an accompanying R script implements the analysis. The declaration provides a shared, explicit interface that can be used to generate artifacts for multiple workflow systems, rather than maintaining a separate hand-written wrapper for each one.\nThe project follows the GA4GH Task Execution Service (TES) task model: stage input files, run one or more containerized commands in sequence, and collect output files. This common model supports projections to Galaxy tools, Nextflow modules, WDL tasks, and TES task templates, while leaving workflow orchestration to the workflow system.\nA related effort is exploring package-scoped containers that bundle a Bioconductor package with its declared dependencies. These images can provide reproducible execution environments for dispatched jobs and build on existing Bioconductor container infrastructure.\nBiocJobs is an early, evolving project. Its specification and generated artifacts are being evaluated across packages and workflow systems, and feedback from package developers and workflow users will help shape them. See the BiocJobs project and the Bioconductor community blog post for details.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Huber, W., V. J. Carey, R. Gentleman, et al. 2015.\n“Orchestrating High-Throughput Genomic Analysis with\nBioconductor.” Nature Methods 12 (2):\n115–21. http://www.nature.com/nmeth/journal/v12/n2/full/nmeth.3252.html.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
