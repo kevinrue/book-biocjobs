@@ -3,6 +3,10 @@ project:
 
 book:
   title: "BiocJobs: Dispatching jobs from Bioconductor packages"
+  repo-url: https://github.com/kevinrue/book-biocjobs
+  repo-branch: main
+  repo-actions: [edit, issue, source]
+  repo-link-target: _blank
   author:
     - name: "Kevin Rue-Albrecht"
       orcid: 0000-0003-3899-3872
